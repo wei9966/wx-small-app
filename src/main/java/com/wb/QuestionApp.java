@@ -9,7 +9,7 @@ import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
 /**
  * Create By WeiBin on 2020/2/27 22:27
  * SpringBoot的启动类
- * ces
+ * 测试jenkins自动部署
  * 1
  */
 @SpringBootApplication
