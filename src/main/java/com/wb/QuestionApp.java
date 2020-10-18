@@ -30,7 +30,7 @@ public class QuestionApp {
         //同时启用http（8080）、https（8443）两个端口
         connector.setScheme("http");
         connector.setSecure(false);
-        connector.setPort(8080);
+        connector.setPort(9090);
         connector.setRedirectPort(8443);
         return connector;
     }
