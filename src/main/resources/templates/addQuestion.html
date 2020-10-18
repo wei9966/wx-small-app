@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>添加试题</title>
+</head>
+<body>
+<form th:action="@{/add/question}" method="post">
+    题干:<textarea name="question_stem" id="stem" cols="30" rows="10"></textarea><br>
+    答案:<textarea name="question_answer" id="answer" cols="30" rows="10"></textarea>
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>

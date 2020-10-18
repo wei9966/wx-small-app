@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/jPages.css">
+    <script src="/static/js/jquery-1.8.2.min.js"></script>
+    <script src="/static/js/jPages.js"></script>
+    <style>
+        #stem{
+            font-size: 22px;
+            font-weight: bold;
+            width: 1200px;
+        }
+        #answer{
+            font-size: 18px;
+            width: 1200px;
+            padding-left: 10px;
+        }
+        #text{
+            width: 0;
+            height: 0;
+        }
+        pre{
+            white-space: pre-wrap!important;
+            word-wrap: break-word!important;
+            *white-space:normal!important;
+        }
+        #father{
+            position: absolute;
+            left: 20%;
+        }
+
+    </style>
+    <script language="JavaScript">
+        $(function(){
+            $("div.holder").jPages({
+                containerID : "itemContainer",
+                previous : "上一页",
+                next : "下一页",
+                perPage : 20,
+                delay : 10
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="father">
+
+    <div  id="itemContainer">
+        <pre width="1200px"  th:each="ll:${list}" >
+    <div th:text="(${ll.id})+.+(${ll.question_stem})" id="stem">
+    </div>
+    <div th:text="${ll.question_answer}" id="answer">
+    </div>
+        </pre>
+    </div>
+    <div class="holder"></div>
+</div>
+</body>
+</html>
