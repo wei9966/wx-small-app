@@ -1,5 +1,5 @@
 server:
-  port: 9090
+  port: 10088
   ssl:
     key-store: ./pfx/3878946_www.wavab.cn.pfx
     key-store-password: WHCKts3t
